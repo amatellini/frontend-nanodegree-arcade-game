@@ -1,6 +1,22 @@
-frontend-nanodegree-arcade-game
-===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+# Frogger Arcade Game
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Summary
+Frogger Arcade is a clone of the classic Frogger arcade game.
+
+#### Objectives
+Get the hero character to move towards the water without getting hit by the enemy. The user's score increases by one if he reach the water, decrease by one if he get hit by the bugs. Every 3 point the game become more difficult, with more enemy that moves at variable speed.
+
+#### Movement and Controls
+Up/right/left/down arrow keys or w/s/a/d on the keyboard.
+
+## Links to GitHub Repository (Master Branch)
+* GitHub Project Repository: [https://github.com/amatellini/frontend-nanodegree-arcade-game/](https://github.com/amatellini/frontend-nanodegree-arcade-game/ "GitHub project repository")
+
+## Installation
+To run the application:
+
+1. Download the GitHub zip file or clone the repository onto your local workstation:
+	* zip file [https://codeload.github.com/amatellini/frontend-nanodegree-arcade-game/zip/master](https://codeload.github.com/amatellini/frontend-nanodegree-arcade-game/zip/master "download zip file")
+	* git clone [https://github.com/amatellini/frontend-nanodegree-arcade-game.git](https://github.com/amatellini/frontend-nanodegree-arcade-game.git "git clone repository")
+2. Open a browser window and navigate to the index.html file in your application's directory.
