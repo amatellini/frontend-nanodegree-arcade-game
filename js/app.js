@@ -140,40 +140,40 @@ Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 
 
-  ctx.strokeStyle = '#ff0000';
-
-  ctx.rect(0 ,0 , ctx.canvas.clientWidth, ctx.canvas.clientHeight);
-  ctx.stroke();
-
-  ctx.strokeStyle = '#000000';
-  ctx.beginPath();
-  ctx.moveTo(100, CLEAN_LIMIT);
-  ctx.lineTo(400, CLEAN_LIMIT);
-  ctx.stroke();
-
-  ctx.strokeStyle = '#26ff29';
-  ctx.beginPath();
-  ctx.moveTo(100, TOP_LIMIT);
-  ctx.lineTo(400, TOP_LIMIT);
-  ctx.stroke();
-
-  ctx.strokeStyle = '#ffa41a';
-  ctx.beginPath();
-  ctx.moveTo(100, BOTTOM_LIMIT);
-  ctx.lineTo(400, BOTTOM_LIMIT);
-  ctx.stroke();
-
-  ctx.strokeStyle = '#ff32ab';
-  ctx.beginPath();
-  ctx.moveTo(RIGHT_LIMIT, 400);
-  ctx.lineTo(RIGHT_LIMIT, 360);
-  ctx.stroke();
-
-  ctx.strokeStyle = '#4f16ff';
-  ctx.beginPath();
-  ctx.moveTo(LEFT_LIMIT, 400);
-  ctx.lineTo(LEFT_LIMIT, 360);
-  ctx.stroke();
+  // ctx.strokeStyle = '#ff0000';
+  //
+  // ctx.rect(0 ,0 , ctx.canvas.clientWidth, ctx.canvas.clientHeight);
+  // ctx.stroke();
+  //
+  // ctx.strokeStyle = '#000000';
+  // ctx.beginPath();
+  // ctx.moveTo(100, CLEAN_LIMIT);
+  // ctx.lineTo(400, CLEAN_LIMIT);
+  // ctx.stroke();
+  //
+  // ctx.strokeStyle = '#26ff29';
+  // ctx.beginPath();
+  // ctx.moveTo(100, TOP_LIMIT);
+  // ctx.lineTo(400, TOP_LIMIT);
+  // ctx.stroke();
+  //
+  // ctx.strokeStyle = '#ffa41a';
+  // ctx.beginPath();
+  // ctx.moveTo(100, BOTTOM_LIMIT);
+  // ctx.lineTo(400, BOTTOM_LIMIT);
+  // ctx.stroke();
+  //
+  // ctx.strokeStyle = '#ff32ab';
+  // ctx.beginPath();
+  // ctx.moveTo(RIGHT_LIMIT, 400);
+  // ctx.lineTo(RIGHT_LIMIT, 360);
+  // ctx.stroke();
+  //
+  // ctx.strokeStyle = '#4f16ff';
+  // ctx.beginPath();
+  // ctx.moveTo(LEFT_LIMIT, 400);
+  // ctx.lineTo(LEFT_LIMIT, 360);
+  // ctx.stroke();
 
   displayScore(score);
 };
