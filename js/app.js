@@ -62,30 +62,32 @@ Player.prototype.update = function() {
 
 Player.prototype.checkIfPlayerWin = function () {
 
-  if (player.y + TOP_LIMIT <= 0) {
-    player.x = player.START_X;
-    player.y = player.START_Y;
+  if (this.y + TOP_LIMIT <= 0) {
+    this.x = this.START_X;
+    this.y = this.START_Y;
 
     increaseScore();
   }
 
   // Clean canvas top space because player image leave traces here
-  if(player.y + 131 < TOP_LIMIT <= 0) {
+  if(this.y + 131 < TOP_LIMIT <= 0) {
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, ctx.canvas.clientWidth, CLEAN_LIMIT);
   }
 };
 
 Player.prototype.checkCollisionWithEnemies = function () {
+  var self = this;
+
   allEnemies.forEach(function(enemy) {
     if (
-      player.y + 131 >= enemy.y + 90
-      && player.x + 25 <= enemy.x + 88
-      && player.y + 73 <= enemy.y + 135
-      && player.x + 76 >= enemy.x + 11) {
+      self.y + 131 >= enemy.y + 90
+      && self.x + 25 <= enemy.x + 88
+      && self.y + 73 <= enemy.y + 135
+      && self.x + 76 >= enemy.x + 11) {
 
-      player.x = player.START_X;
-      player.y = player.START_Y;
+      self.x = self.START_X;
+      self.y = self.START_Y;
 
       decreaseScore();
     }
@@ -94,14 +96,14 @@ Player.prototype.checkCollisionWithEnemies = function () {
 
 
 Player.prototype.checkCollisionWithBorders = function () {
-  if (player.y >= BOTTOM_LIMIT ) {
-    player.y = player.START_Y;
+  if (this.y >= BOTTOM_LIMIT ) {
+    this.y = this.START_Y;
   }
-  if (player.x >= RIGHT_LIMIT) {
-    player.x = RIGHT_LIMIT;
+  if (this.x >= RIGHT_LIMIT) {
+    this.x = RIGHT_LIMIT;
   }
-  if (player.x <= LEFT_LIMIT) {
-    player.x = LEFT_LIMIT;
+  if (this.x <= LEFT_LIMIT) {
+    this.x = LEFT_LIMIT;
   }
 };
 
