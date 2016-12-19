@@ -1,8 +1,10 @@
-var BOTTOM_LIMIT = 383; //380
-var TOP_LIMIT = 63; //63
-var RIGHT_LIMIT = 402.5; //402.5
-var LEFT_LIMIT = 2.5; //2.5
-var CLEAN_LIMIT = 63; //171
+'use strict';
+
+var BOTTOM_LIMIT = 383;
+var TOP_LIMIT = 63;
+var RIGHT_LIMIT = 402.5;
+var LEFT_LIMIT = 2.5;
+var CLEAN_LIMIT = 63;
 
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
@@ -52,13 +54,13 @@ var Player = function(x, y, speed) {
 };
 
 Player.prototype.update = function() {
-  checkIfPlayerWin();
-  checkCollisionWithEnemies();
-  checkCollisionWithBorders();
+  this.checkIfPlayerWin();
+  this.checkCollisionWithEnemies();
+  this.checkCollisionWithBorders();
 };
 
 
-var checkIfPlayerWin = function () {
+Player.prototype.checkIfPlayerWin = function () {
 
   if (player.y + TOP_LIMIT <= 0) {
     player.x = player.START_X;
@@ -74,7 +76,7 @@ var checkIfPlayerWin = function () {
   }
 };
 
-var checkCollisionWithEnemies = function () {
+Player.prototype.checkCollisionWithEnemies = function () {
   allEnemies.forEach(function(enemy) {
     if (
       player.y + 131 >= enemy.y + 90
@@ -91,7 +93,7 @@ var checkCollisionWithEnemies = function () {
 };
 
 
-var checkCollisionWithBorders = function () {
+Player.prototype.checkCollisionWithBorders = function () {
   if (player.y >= BOTTOM_LIMIT ) {
     player.y = player.START_Y;
   }
@@ -181,19 +183,19 @@ Player.prototype.render = function() {
 
 Player.prototype.handleInput = function(keyPress) {
   if(keyPress == 'left') {
-    player.x -= player.speed;
+    this.x -= this.speed;
   }
   if(keyPress == 'up') {
-    player.y -= player.speed;
+    this.y -= this.speed;
   }
   if(keyPress == 'right') {
-    player.x += player.speed;
+    this.x += this.speed;
   }
   if(keyPress == 'down') {
-    player.y += player.speed;
+    this.y += this.speed;
   }
 
-  console.log("X: " + player.x + " Y: " + player.y);
+  //console.log("X: " + player.x + " Y: " + player.y);
 };
 
 // Function to display player's score
